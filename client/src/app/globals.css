@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  /* height: 100%; */
+}
+
+.glass {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+}
+
+.cardGlass {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(19.3px);
+  -webkit-backdrop-filter: blur(19.3px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.darkbg {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #212121 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(33 33 33 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #000000 var(--tw-gradient-to-position);
+}

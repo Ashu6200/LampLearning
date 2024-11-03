@@ -1,10 +1,23 @@
-class ApiResponse {
-    constructor(statusCode, data, message = "Success") {
-        this.statusCode = statusCode;
-        this.data = data;
-        this.message = message;
-        this.success = statusCode < 400;
-    }
-}
+const { config } = require("dotenv")
+const { EApplicationEnvironment } = require("../constant/constant")
 
-module.exports = ApiResponse;
+const ApiResponse = (req, res, responseStatusCode, responseMessage, data = null) => {
+
+    const responseObj = {
+        success: true,
+        statusCode: responseStatusCode,
+        request: {
+            ip: req.ip || null,
+            method: req.method,
+            url: req.originalUrl
+
+        },
+        message: responseMessage,
+        data: data
+    }
+    if (config.ENV === EApplicationEnvironment.PRODUCTION) {
+        delete responseObj.request.ip
+    }
+    return res.status(responseStatusCode).json(responseObj)
+}
+module.exports = ApiResponse

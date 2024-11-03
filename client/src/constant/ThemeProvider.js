@@ -1,12 +1,10 @@
 "use client";
 
-import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { ThemeProvider as MaterialTailwindThemeProvider } from "@material-tailwind/react";
-const ThemeProvider = ({ children, ...props }) => {
+
+const ThemeProvider = ({ children }) => {
   return (
-    <NextThemesProvider {...props}>
-      <MaterialTailwindThemeProvider>{children}</MaterialTailwindThemeProvider>
-    </NextThemesProvider>
+    <MaterialTailwindThemeProvider>{children}</MaterialTailwindThemeProvider>
   );
 };
 

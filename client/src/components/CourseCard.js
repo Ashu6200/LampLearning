@@ -3,9 +3,9 @@ import Link from 'next/link'
 import React from 'react'
 import { CiSaveDown2 } from 'react-icons/ci'
 
-const CourseCard = ({ thumbnail, title, description, key }) => {
+const CourseCard = ({ thumbnail, title, description }) => {
     return (
-        <div key={key} className='cardGlass rounded-3xl'>
+        <div className='cardGlass rounded-3xl'>
             <div>
                 <Image
                     src={thumbnail}
@@ -17,20 +17,20 @@ const CourseCard = ({ thumbnail, title, description, key }) => {
                     height={300}
                 />
                 <div className='py-2 px-4'>
-                    <h4 className='text-black dark:text-white text-[16px] font-[600] '>
+                    <h4 className='text-white text-lg font-[600] '>
                         {title}
                     </h4>
-                    <p className='text-black dark:text-white text-[14px] font-[500] '>
+                    <p className='text-white  text-sm font-[500] '>
                         {description}
                     </p>
                     <div className='flex items-center my-2 justify-between'>
                         <Link
-                            href={"/"}
+                            href={`/courses/${title}`}
                             className='py-1 px-3 bg-[#6126DD] rounded-[5px] cursor-pointer text-[12px] text-white'
                         >
                             View
                         </Link>
-                        <CiSaveDown2 size={25} className='cursor-pointer' />
+                        <CiSaveDown2 size={25} className='cursor-pointer text-white' />
                     </div>
                 </div>
             </div>

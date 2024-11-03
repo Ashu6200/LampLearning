@@ -1,6 +1,7 @@
 import ThemeProvider from "@/constant/ThemeProvider";
 import "./globals.css";
 import { Poppins } from "next/font/google";
+import StoreProvider from "@/constant/StoreProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,13 +18,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en' suppressHydrationWarning={true}>
-      <body
-        className={`${poppins.variable} bg-white !bg-no-repeat dark:bg-gradient-to-b dark:from-gray-900 dark:to-black duration-300`}
-      >
-        <ThemeProvider attribute='class' defaultTheme='light'>
-          {children}
+      <body className={`${poppins.variable} relative`}>
+        <ThemeProvider>
+          <StoreProvider>
+            <div className={"blurspot"}></div>
+            <div className={"blurspot2"}></div>
+            <div className={"blurspot3"}></div>
+            {children}
+          </StoreProvider>
         </ThemeProvider>
       </body>
-    </html>
+    </html >
   );
 }

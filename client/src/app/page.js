@@ -1,15 +1,14 @@
-import Footer from "@/components/Footer";
-import HeroBanner from "@/components/HeroBanner";
-import Navbar from "@/components/Navbar";
-import TypeCourses from "@/components/TypeCourses";
-import { MasonryGridGallery } from "@/constant";
+import Article from "@/components/layout/Article";
+import Footer from "@/components/layout/Footer";
+import HeroBanner from "@/components/layout/HeroBanner";
+import Navbar from "@/components/layout/Navbar";
 
 export default function Home() {
   return (
     <main className='w-full relative'>
       <Navbar />
       <HeroBanner />
-      <TypeCourses />
+      <Article />
       <Footer />
     </main>
   );

@@ -2,24 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  width: 100%;
-  /* height: 100%; */
-}
-
-.glass {
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.7px);
-  -webkit-backdrop-filter: blur(8.7px);
-}
 
 .cardGlass {
   background: rgba(255, 255, 255, 0.03);
@@ -30,10 +12,67 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.darkbg {
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-  --tw-gradient-from: #212121 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(33 33 33 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #000000 var(--tw-gradient-to-position);
+.tableGlass {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(19.3px);
+  -webkit-backdrop-filter: blur(19.3px);
+}
+
+.btn-bg {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.9px);
+  -webkit-backdrop-filter: blur(4.9px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.react-calendar__navigation button {
+  color: white;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  color: white;
+  text-decoration: none;
+}
+
+.react-calendar__navigation__label__labelText {
+  font-weight: 600;
+  color: white;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: red !important
+}
+
+.react-calendar__tile--active {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(19.3px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: white !important;
+}
+
+.react-calendar__tile--now {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(19.3px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background-color: transparent !important;
+}
+
+.react-calendar__tile {
+  color: white;
 }

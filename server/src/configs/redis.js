@@ -1,7 +1,8 @@
 const { Redis } = require("ioredis");
+const config = require("./config");
 
 const redisCLient = () => {
-    if (process.env.REDIS_URL) {
+    if (config.REDISURL) {
         console.log('Redis is connected');
         return process.env.REDIS_URL;
     }
